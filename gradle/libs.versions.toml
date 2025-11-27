@@ -33,10 +33,13 @@ room-ktx = {module = "androidx.room:room-ktx", version.ref = "room"}
 room-compiler = {module = "androidx.room:room-compiler", version.ref = "room"}
 lifecycle-viewmodel-compose = {module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref=""}
 lifecycle-runtime-compose = {module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref=""}
-
+navigation-compose = {module = "androidx.navigation:navigation-compose", version.ref = "2.9.6"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspver"}
 
+[bundles]
+room = ["room-runtime", "room-ktx"]
