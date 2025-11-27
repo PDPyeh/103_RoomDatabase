@@ -1,7 +1,7 @@
 package com.example.database.repositori
 
 import android.app.Application
-import androidx.room.processor.Context
+import android.content.Context
 import com.example.database.room.DatabaseSiswa
 
 interface ContainerApp {
@@ -9,22 +9,19 @@ interface ContainerApp {
 }
 
 class ContainerDataApp(private val context: Context):
-        ContainerApp {
+    ContainerApp{
     override val repositoriSiswa: RepositoriSiswa by lazy {
         OfflineRepositoriSiswa(
-            DatabaseSiswa.getDatabase(context).siswaDao()
-        )
+            siswaDao = DatabaseSiswa.getDatabase(context).siswaDao())
     }
-
 }
 
 class AplikasiSiswa : Application(){
-
-
     lateinit var container: ContainerApp
 
-    override fun onCreate() {
+    override fun onCreate(){
         super.onCreate()
-        container = ContainerDataApp(this)
+        container = ContainerDataApp(context = this)
     }
+
 }
