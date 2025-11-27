@@ -25,7 +25,7 @@ class EntryViewModel(private val repositoriSiswa: RepositoriSiswa) : ViewModel()
         uiStateSiswa =
             UIStateSiswa(
                 detailSiswa = detailSiswa,
-                isEntryValid = validasiInput(detailSiswa)
+                validasiInput(detailSiswa)
             )
     }
 

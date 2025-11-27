@@ -29,6 +29,8 @@ import com.example.database.viewmodel.provider.PenyediaViewModel
 import com.example.database.R
 import com.example.database.view.route.DestinasiEntry
 import kotlinx.coroutines.launch
+import androidx.compose.material3.TopAppBarScrollBehavior
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,7 +52,7 @@ fun EntrySiswaScreen(
         }) { innerPadding ->
         EntrySiswaBody(
             uiStateSiswa = viewModel.uiStateSiswa,
-            onSiswaValueChange = viewModel::updateUiState,
+            onSiswaValueChange = viewModel::updateUIState,
             onSaveClick = {
                 coroutineScope.launch {
                     viewModel.saveSiswa()
