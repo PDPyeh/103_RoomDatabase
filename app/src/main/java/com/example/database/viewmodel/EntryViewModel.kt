@@ -16,6 +16,10 @@ fun DetailSiswa.toSiswa(): Siswa = Siswa(
     telpon = telpon
 )
 
+fun Siswa.toUiStateSiswa(isEntryValid:Boolean = false): UIStateSiswa = UIStateSiswa(
+    detailSiswa = this.toDetailSiswa(),
+    isEntryValid = isEntryValid
+)
 
 
 fun Siswa.toDetailSiswa(): DetailSiswa = DetailSiswa(
