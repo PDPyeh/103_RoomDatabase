@@ -1,12 +1,10 @@
-package com.example.database.viewmodel.provider
+package com.example.database.viewmodel
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.database.repositori.RepositoriSiswa
-import com.example.database.viewmodel.DetailSiswa
-import com.example.database.viewmodel.UIStateSiswa
 import com.example.myroomsiswa.view.route.DestinasiDetailSiswa
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
