@@ -10,6 +10,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.database.view.DetailDataSiswa
+import com.example.database.view.DetailSiswaScreen
 import com.example.database.view.HomeScreen
 import com.example.database.view.route.DestinasiHome
 import com.example.database.view.route.DestinasiEntry
@@ -49,6 +51,10 @@ fun HostNavigasi(
             {
                 type = NavType.IntType
             })
-        )
+        ){
+            DetailSiswaScreen(
+                navigateBack = {navController.navigateUp()}
+            )
+        }
     }
 }

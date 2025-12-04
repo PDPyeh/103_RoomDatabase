@@ -74,6 +74,7 @@ fun HomeScreen(
         val uiStateSiswa by viewModel.homeUiState.collectAsState()
         BodyHome(
             itemSiswa = uiStateSiswa.listSiswa,
+            onSiswaClick = navigateToItemUpdate,
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
@@ -100,7 +101,7 @@ fun BodyHome(
             ListSiswa(
                 itemSiswa = itemSiswa,
                 onSiswaClick ={onSiswaClick(it.id)},
-                modifier = Modifier.padding(horizontal = dimensionResource(id = 8.dp))
+                modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_small))
             )
         }
     }
