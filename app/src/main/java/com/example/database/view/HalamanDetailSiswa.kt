@@ -34,6 +34,12 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.database.R
+import com.example.database.room.Siswa
+import com.example.database.viewmodel.DetailSiswaUiState
+import com.example.database.viewmodel.DetailViewModel
+import com.example.database.viewmodel.provider.PenyediaViewModel
+import com.example.database.viewmodel.toSiswa
 import com.example.myroomsiswa.view.route.DestinasiDetailSiswa
 
 import kotlinx.coroutines.launch
@@ -44,7 +50,8 @@ fun DetailSiswaScreen(
     navigateToEditItem: (Int) -> Unit,
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: DetailViewModel = viewModel(factory = PenyediaViewModel.Factory)
+    viewModel:
+    DetailViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
     Scaffold(
         topBar = {
