@@ -98,7 +98,8 @@ fun BodyHome(
         } else {
             ListSiswa(
                 itemSiswa = itemSiswa,
-                modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_small))
+                onSiswaClick ={onSiswaClick(it.id)},
+                modifier = Modifier.padding(horizontal = dimensionResource(id = 8.dp))
             )
         }
     }
